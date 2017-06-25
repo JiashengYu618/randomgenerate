@@ -60,13 +60,29 @@ shinyServer(function(input, output) {
       sd(x)
   })
   
-  
   output$emmean <- renderText({
       mean.pred()
   })
   
   output$emvar <- renderText({
       sd.pred()
+  })
+  
+
+  output$warn <- renderText({
+    if(input$shape <= 0 | input$rate <= 0) {"Shape and rate should be greater than 0!"}
+  })
+  
+  output$warn2 <- renderText({
+      if(as.numeric(input$n.trial) %% 1 != 0 | as.numeric(input$n.trial) <= 0) {
+          "Number of trials should be an positive integer!"
+      }
+  })
+  
+  output$warn3 <- renderText({
+      if(as.numeric(input$nsim) %% 1 != 0 | as.numeric(input$nsim) <= 0) {
+          "Number of draws should be an positive integer!"
+      }
   })
   
 })

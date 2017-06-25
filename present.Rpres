@@ -1,0 +1,46 @@
+Random Number Generation Using Shiny
+========================================================
+author: Cheng-Han Yu, UC Santa Cruz
+date: June 25, 2017
+autosize: true
+transition: linear
+transition-speed: slow
+<!-- font-import: http://fonts.googleapis.com/css?family=Risque -->
+<!-- font-family: 'Risque' -->
+
+What is the Shiny App for and Where to Use It
+========================================================
+incremental: true
+<!-- type: section -->
+
+This Shiny app generates random draws from **normal**, **binomial**, or **gamma** distribution, plots a histogram of these random draws and compute the empirical mean and standard deviation of these random samples. 
+
+The Shiny app is hosted at [https://cheyu.shinyapps.io/randomgenerate/](https://cheyu.shinyapps.io/randomgenerate/) to the general public. 
+
+To reach the source code and the supporting documentation, please go the the GitHub site: [https://github.com/chenghanyu/randomgenerate](https://github.com/chenghanyu/randomgenerate)
+
+
+Inputs of the Shiny App
+========================================================
+incremental: true
+
+The inputs or parameters users can specify include 
+- The parameters of the underlying distribution: the mean $\mu$ and standard deviation $\sigma$ of $N(\mu, \sigma^2)$, the number of trials $n$ and the probability of success $p$ of $Bino(n, p)$ and shape parameter $a$ and rate parameter $b$ of $Gamma(a, b)$.
+- The number of random draws to be generated.
+- The number of bins used in the histogram.
+- For normal and gamma distributions, one can further decide to add estimated density on the histogram or not.
+- **Note: After choosng the distribution, one has to press Sumbit first in order to specify the corresponding distribution parameters.**
+
+Default Values and Ranges of Inputs
+========================================================
+- For the normal distribution, the default value is $N(0, 1)$ i.e., standard normal. For binomial distribution, the default is $Bino(10, 0.5)$. The default gamma distribution is $Gamma(1, 1)$.
+- For $N(\mu, \sigma^2)$, $\mu \in (-1000, 1000)$, $\sigma \in (0, 100)$. For $Bino(n, p)$, $n$ is positive integer and $p \in (0, 1)$. For $Gamma(a, b)$, $a > 0$ and $b > 0$. 
+- The default number of random draws is 1000. The minimum is 100 and the maximum is 10000 with increment 50. In fact, one can specify an arbitary positive integer in the box.
+- The default number of bins used in the histogram is 30. The minimum is 5 and the maximum is 150 with increment 1.
+- The density curve is not included by default.
+
+The Default Interface of the Shiny App
+====================================
+![default](randomgenerate.png)
+
+

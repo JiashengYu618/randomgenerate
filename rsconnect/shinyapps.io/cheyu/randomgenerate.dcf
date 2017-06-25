@@ -3,8 +3,8 @@ title: randomgenerate
 account: cheyu
 server: shinyapps.io
 appId: 192105
-bundleId: 881475
+bundleId: 881589
 url: https://cheyu.shinyapps.io/randomgenerate/
-when: 1498414732.43105
+when: 1498427580.3364
 asMultiple: FALSE
 asStatic: FALSE

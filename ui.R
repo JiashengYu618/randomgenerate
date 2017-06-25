@@ -25,8 +25,8 @@ shinyUI(fluidPage(
         conditionalPanel(
             condition = "input.dist == 'binom'",
             textInput("n.trial", "Number of trials", value = "10"),
-            textInput("prob", "Probability of success", 
-                      value = "0.5")
+            sliderInput("prob", "Probability of success", min = 0, max = 1,
+                      value = 0.5, step = 0.05)
         ),
         
         conditionalPanel(
@@ -65,6 +65,10 @@ shinyUI(fluidPage(
         ),
 
         plotOutput("distPlot"),
+        # span(textOutput("warn"), style="color:red"),
+        textOutput("warn"),
+        textOutput("warn2"),
+        textOutput("warn3"),
         h3("Empirical mean is:"),
         textOutput("emmean"),
         h3("Empirical standard deviation is:"),

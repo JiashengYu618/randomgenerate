@@ -23,6 +23,8 @@ This app generates random draws from normal, binomial, or gamma distribution. Us
 ### Example
 Take a normal distribution for example. The default value of parameters are mean 0 and variance 1, i.e., standard normal. One can use the slider bars on the left to select any mean value between -1000 and 1000 with increment 0.1, and the standard deviation between 0 and 1000 with increment 0.1. The default number of draws is 1000 and increment 50. The number of bins can be from 5 to 150 with default value 30. After all inputs are set, simply press the Submit button at the end of the left panel, we would have a histogram for normal distribution and its empirical mean and standard deviation in the right panel, which can be used to verify the theoretical mean and standard deviation we specify in the left panel. For instance, given the mean 134 and standard deviation 10 and 10000 draws, the empirical mean and standard deviation are 133.7896 and 9.9402, respectively.
 
+*Note: After choosng the distribution, one has to press Sumbit first in order to specify the corresponding distribution parameters.*
+
 
 
 
