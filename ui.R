@@ -67,7 +67,7 @@ shinyUI(fluidPage(
         plotOutput("distPlot"),
         h3("Empirical mean is:"),
         textOutput("emmean"),
-        h3("Empirical variance is:"),
+        h3("Empirical standard deviation is:"),
         textOutput("emvar")
     )
   )
